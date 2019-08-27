@@ -1,0 +1,15 @@
+.leaflet-container {
+    height: 800px;
+    margin: 5px;
+}
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px grey;
+}
+body {
+    color:#000;
+    background-color: #fff;
+}
