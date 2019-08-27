@@ -13,14 +13,14 @@ class Weather extends Component {
     }
     filterResults = () => {
         var keyword = this.props.keyword;
-        fetch(`http://api.openweathermap.org/data/2.5/weather?q=${keyword}&appid=10eef0d5859a79e048209ecd86701ac1`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${keyword}&appid=10eef0d5859a79e048209ecd86701ac1`)
             .then(res => res.json())
             .then(items => this.setState({
                 result: items
             }))
             .catch(err => console.log(err));
 
-        fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${keyword}&appid=10eef0d5859a79e048209ecd86701ac1`)
+        fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${keyword}&appid=10eef0d5859a79e048209ecd86701ac1`)
             .then(res=> res.json())
             .then(items=> this.setState({days:items}))
             .catch(err=>console.log(err))

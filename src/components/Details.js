@@ -15,7 +15,7 @@ class Details extends Component {
     }
     componentDidMount() {
         var keyword = this.props.match.params.city;
-        fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${keyword}&appid=10eef0d5859a79e048209ecd86701ac1`)
+        fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${keyword}&appid=10eef0d5859a79e048209ecd86701ac1`)
             .then(res=> res.json())
             .then(data=> this.setState({forecast:data}))
             .catch(err=>console.log(err));

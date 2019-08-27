@@ -39,7 +39,7 @@ class WeatherMap extends Component {
     var up = coords._northEast.lat;
     var bottom = coords._southWest.lat;
     if(zoom>7) {
-      fetch(`http://api.openweathermap.org/data/2.5/box/city?bbox=${right},${up},${left},${bottom},${zoom}&appid=10eef0d5859a79e048209ecd86701ac1`)
+      fetch(`https://api.openweathermap.org/data/2.5/box/city?bbox=${right},${up},${left},${bottom},${zoom}&appid=10eef0d5859a79e048209ecd86701ac1`)
       .then(res=> res.json())
       .then(items=>this.setState({markers:items.list}))
       .catch(err=>console.log(err));
